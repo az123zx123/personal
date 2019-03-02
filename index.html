@@ -1,35 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Li Xiang's home page</title>
-    <script src = "default.js"></script>
-    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".chinese").hide();
-            $("#convert_to_english").hide();
-            $("#convert_to_chinese").click(function(){
-                $(".chinese").show();
-                $(".english").hide();
-                $("#convert_to_chinese").hide();
-                $("#convert_to_english").show();
-            });
-            $("#convert_to_english").click(function(){
-                $(".chinese").hide();
-                $(".english").show();
-                $("#convert_to_chinese").show();
-                $("#convert_to_english").hide();
-            });
-        });
-    </script>
-</head>
-<body>
-<p class="english">Welcome!</p>
-<p class="english">Here you can find some useful information!</p>
-<p class="chinese">欢迎!</p>
-<p class="chinese">这里你能找到一些有用的信息!</p>
-<button id = "convert_to_chinese">translate</button>
-<button id = "convert_to_english">翻译</button>
-</body>
-</html>
+---
+layout: default
+---
