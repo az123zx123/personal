@@ -13,7 +13,7 @@ github_username:  az123zx123
 gplus_username:  none
 linkedin_public_url: 想-李-40420814b # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
 disqus_username: none
-profile_picture: https://github.com/az123zx123/personal/blob/master/src/img/profile.jpg
+profile_picture: https://az123zx123.github.io/personal/profile.jpg
 
 # Build settings
 markdown: kramdown
@@ -50,9 +50,9 @@ links:
       url: http://www.github.com/az123zx123
       new_tab: true
       key_trigger: g
-    - title: twitter
-      url: http://www.twitter.com/victorvoid
-      key_trigger: t
+    - title: facebook
+      url: https://www.facebook.com/profile.php?id=100021979440011
+      key_trigger: f
     - title: search
       url: ""
       key_trigger: s #WARNING: search only works with "s"
