@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="800px" height="600px"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xhtml="http://www.w3.org/1999/xhtml"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:a="http://www.adobe.com/svg10-extensions" a:timeline="independent"
+     onload="top.load(evt)">
+
+  <defs>
+      <clipPath id="start_clip">
+          <rect x="800" y="600" width="0" height="0">
+              <animate id="effect2" attributeName="x" attributeType="XML" values="400;0"
+                       begin="again.click;0s" dur="2s" fill="freeze"/>
+              <animate attributeName="y" attributeType="XML" values="300;0"
+                       begin="effect2.begin" dur="2s" fill="freeze"/>
+              <animate attributeName="width" attributeType="XML" values="0;800"
+                       begin="effect2.begin" dur="2s" fill="freeze"/>
+              <animate attributeName="height" attributeType="XML" values="0;600"
+                       begin="effect2.begin" dur="2s" fill="freeze"/>
+          </rect>
+      </clipPath>
+      <clipPath id="effect_clip">
+          <rect x="0" y="0" width="0" height="0">
+              <animate id="effect" attributeName="x" attributeType="XML"
+                       values="400;0"
+                       begin="button.click" dur="2s" fill="freeze"/>
+              <animate attributeName="y" attributeType="XML"
+                       values="300;0"
+                       begin="effect.begin" dur="2s" fill="freeze"/>
+              <animate attributeName="width" attributeType="XML"
+                       values="0;800"
+                       begin="effect.begin" dur="2s" fill="freeze"/>
+              <animate attributeName="height" attributeType="XML"
+                       values="0;600"
+                       begin="effect.begin" dur="2s" fill="freeze"/>
+          </rect>
+      </clipPath>
+      <linearGradient id="back_color" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+      </linearGradient>
+    <clipPath id="gameareaclip">
+      <rect x="20" y="20" width="600" height="560"/>
+    </clipPath>
+    <pattern id="background_pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" style="fill:yellow"/>
+      <circle cx="10" cy="10" r="8" style="fill:lightyellow"/>
+    </pattern>
+    <radialGradient id="player_color">
+      <stop offset="0.0" style="stop-color:yellow;stop-opacity:1"/>
+      <stop offset="0.8" style="stop-color:yellow;stop-opacity:1"/>
+      <stop offset="1.0" style="stop-color:orange;stop-opacity:1"/>
+    </radialGradient>
+    <!--define you monster here-->
+      <g id="monster">
+          <rect x="0" y="0" width="40" height="40" style="fill:red;stroke:black;stroke-width:2"/>
+          <rect style="fill:black" width="40" height="8" x="0" y="16"/>
+          <circle cx="26" cy="19.5" r="4"  style="fill:white">
+          <animate attributeName="fill" values="white;black;white" dur="1s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="35" cy="19.5" r="4"  style="fill:white">
+          <animate attributeName="fill" values="white;black;white" dur="1s" repeatCount="indefinite" />
+      </circle>
+      </g>
+
+    <!--define you bullet here-->
+      <g id="bullet">
+          <polygon points="5,0 7,3 10,5 7,7 5,10 3,7 0,5 3,3" style="fill:grey" />
+      </g>
+
+      <g id="goodthing">
+              <polygon points="0,5 4,0 11,0 15,5 7.5,15" style="fill:lightblue" />
+      </g>
+
+      <g id="monster_bullet">
+          <polygon points="5,0 7,3 10,5 7,7 5,10 3,7 0,5 3,3" style="fill:red" />
+      </g>
+      <g id="name">
+      <text id="name_value" x="0" y="0" style="fill:cadetblue;font-size:16px;text-anchor:middle">Anonymous</text>
+      </g>
+      <g id="exit">
+      <rect x="0" y="0" width="40" height="40" style="fill:green">
+      <animate attributeName="fill" values="green;grey;green" dur="1s" repeatCount="indefinite" />
+      </rect>
+      <text x="3" y="10">EXIT</text>
+      </g>
+  </defs>
+
+
+
+  <rect width="100%" height="100%" style="fill:url(#background_pattern);stroke:orange;stroke-width:4" />
+
+  <rect x="20" y="20" width="600" height="560" style="fill:black;stroke:red;stroke-width:5" />
+  <g style="clip-path:url(#gameareaclip)">
+    <g transform="translate(20,20)">
+      <g id="gamearea" transform="translate(0,0)" width="600" height="560" >
+        <rect x="0" y="0" width="600" height="560" style="fill:white" />
+
+        <g id="platforms">
+            <!-- 0 -->
+            <rect style="fill:Tan " width="60" height="20" x="540" y="0"/>
+
+            <!-- 20 -->
+
+            <!-- 40 -->
+            <rect style="fill:Tan " width="80" height="20" x="280" y="40"/>
+            <!-- 60 -->
+            <rect style="fill:Tan " width="80" height="20" x="0" y="60"/>
+            <rect style="fill:Tan " width="60" height="20" x="140" y="60"/>
+            <rect style="fill:Tan " width="200" height="20" x="280" y="60"/>
+
+            <!-- 80 -->
+            <rect style="fill:Tan " width="40" height="20" x="520" y="80"/>
+            <rect style="fill:Tan " width="20" height="60" x="460" y="80"/>
+            <rect id="portal2" style="fill:lightblue" width="10" height="40" x="450" y="80">
+             <animate attributeName="fill" values="lightblue;grey;lightblue" dur="1s" repeatCount="indefinite" />
+            </rect>
+
+
+            <!-- 100 -->
+
+
+            <!-- 120 -->
+            <rect style="fill:Tan " width="40" height="20" x="220" y="120"/>
+            <rect style="fill:Tan " width="100" height="20" x="360" y="120"/>
+
+            <!-- 140 -->
+            <rect style="fill:Tan " width="40" height="20" x="220" y="140"/>
+            <rect style="fill:Tan " width="40" height="20" x="560" y="140"/>
+
+            <!-- 160 -->
+            <rect style="fill:Tan" width="120" height="20" x="180" y="160"/>
+            <rect style="fill:Tan" width="60" height="20" x="540" y="160"/>
+
+            <!-- 180 -->
+            <rect style="fill:Tan" width="20" height="20" x="0" y="180"/>
+            <rect style="fill:Tan" width="20" height="20" x="100" y="180"/>
+            <rect style="fill:Tan" width="20" height="20" x="380" y="180"/>
+            <rect style="fill:Tan" width="20" height="60" x="240" y="180"/>
+            <rect style="fill:Tan" width="80" height="20" x="520" y="180"/>
+
+            <!-- 200 -->
+            <rect style="fill:Tan" width="20" height="20" x="0" y="200"/>
+            <rect style="fill:Tan" width="40" height="20" x="80" y="200"/>
+            <rect style="fill:Tan" width="80" height="20" x="360" y="200"/>
+
+            <!-- 220 -->
+            <rect style="fill:Tan" width="160" height="20" x="0" y="220"/>
+            <rect style="fill:Tan" width="140" height="20" x="320" y="220"/>
+
+            <!-- 240 -->
+            <rect style="fill:Tan" width="20" height="20" x="240" y="240"/>
+            <rect style="fill:Tan" width="160" height="20" x="340" y="240"/>
+
+            <!-- 260 -->
+            <rect style="fill:Tan" width="60" height="20" x="220" y="260"/>
+
+            <!-- 280 -->
+            <rect style="fill:Tan" width="100" height="20" x="200" y="280"/>
+            <rect style="fill:Tan" width="40" height="20" x="560" y="280"/>
+
+            <!-- 300 -->
+            <rect style="fill:Tan" width="100" height="20" x="120" y="300"/>
+            <rect style="fill:Tan" width="40" height="20" x="280" y="300"/>
+            <rect style="fill:Tan" width="100" height="20" x="500" y="300"/>
+
+            <!-- 320 -->
+            <rect style="fill:Tan" width="40" height="20" x="0" y="320"/>
+            <rect style="fill:Tan" width="40" height="20" x="280" y="320"/>
+            <rect style="fill:Tan" width="20" height="20" x="380" y="320"/>
+
+            <!-- 340 -->
+            <rect style="fill:Tan" width="60" height="20" x="0" y="340"/>
+            <rect style="fill:Tan" width="60" height="20" x="380" y="340"/>
+
+            <!-- 360 -->
+            <rect style="fill:Tan" width="120" height="20" x="0" y="360"/>
+            <rect style="fill:Tan" width="120" height="20" x="380" y="360"/>
+
+            <!-- 380 -->
+            <rect style="fill:Tan" width="100" height="20" x="0" y="380"/>
+            <rect style="fill:Tan" width="20" height="20" x="580" y="380"/>
+
+            <!-- 400 -->
+            <rect style="fill:Tan" width="80" height="20" x="180" y="400"/>
+            <rect style="fill:Tan" width="40" height="20" x="560" y="400"/>
+
+            <!-- 420 -->
+            <rect style="fill:Tan" width="200" height="20" x="160" y="420"/>
+            <rect style="fill:Tan" width="60" height="20" x="540" y="420"/>
+
+            <!-- 440 -->
+            <rect style="fill:Tan" width="100" height="20" x="160" y="440"/>
+            <rect style="fill:Tan" width="40" height="20" x="520" y="440"/>
+
+            <!-- 460 -->
+            <rect style="fill:Tan" width="60" height="20" x="120" y="460"/>
+            <rect style="fill:Tan" width="40" height="20" x="400" y="460"/>
+            <rect style="fill:Tan" width="20" height="40" x="500" y="460"/>
+
+            <!-- 480 -->
+            <rect style="fill:Tan" width="40" height="20" x="0" y="480"/>
+            <rect style="fill:Tan" width="60" height="20" x="380" y="480"/>
+
+            <!-- 500 -->
+            <rect style="fill:Tan" width="60" height="20" x="0" y="500"/>
+            <rect style="fill:Tan" width="20" height="20" x="260" y="500"/>
+
+            <!-- 520 -->
+            <rect style="fill:Tan" width="80" height="20" x="0" y="520"/>
+            <rect style="fill:Tan" width="20" height="20" x="140" y="520"/>
+            <rect style="fill:Tan" width="80" height="20" x="240" y="520"/>
+
+
+            <rect id="portal1" style="fill:lightblue" width="10" height="40" x="590" y="500">
+            <animate attributeName="fill" values="lightblue;grey;lightblue" dur="1s" repeatCount="indefinite" />
+            </rect>
+
+            <!-- the floor -->
+            <rect style="fill:Tan" width="600" height="20" x="0" y="540"/>
+        </g>
+
+
+          <!--add monsters to the gamearea-->
+          <g id="monsters"/>
+
+	<!--add bullets to the gamearea-->
+          <g id="bullets"/>
+
+          <g id="player_name" />
+
+          <g id="exit_here"/>
+
+          <g id="monster_bullets"/>
+
+          <g id="goodThings"/>
+
+        <g id="player" style="opacity ">
+          <circle cx="20" cy="20" r="20" style="fill:black;stroke:black;stroke-width:2"/>
+          <rect style="fill:red" width="40" height="8" x="0" y="16"/>
+          <circle cx="26" cy="19.5" r="4"  style="fill:white" />
+          <circle cx="35" cy="19.5" r="4"  style="fill:white"/>
+           </g>
+      </g>
+    </g>
+  </g>
+    <g transform="translate(640, 120)">
+        <text x="70" y="0"
+              style="fill:orange;font-size:25px;font-weight:bold;text-anchor:middle">
+            Score:
+        </text>
+        <rect x="0" y="10" width="140" height="35" style="fill:white" />
+        <text id="score" x="70" y="36"
+              style="fill:orange;font-size:25px;text-anchor:middle">0</text>
+    </g>
+    <g transform="translate(640, 120)">
+        <text x="70" y="100"
+              style="fill:orange;font-size:25px;font-weight:bold;text-anchor:middle">
+            bullets:
+        </text>
+        <rect x="0" y="110" width="140" height="35" style="fill:white" />
+        <text id="numberOfBullets" x="70" y="136"
+              style="fill:orange;font-size:25px;text-anchor:middle">8</text>
+    </g>
+    <g transform="translate(640, 120)">
+        <text x="70" y="200"
+              style="fill:orange;font-size:25px;font-weight:bold;text-anchor:middle">
+            time:
+        </text>
+        <rect x="0" y="210" width="140" height="35" style="fill:white" />
+        <text id="timeLeft" x="70" y="236"
+              style="fill:orange;font-size:25px;text-anchor:middle">60</text>
+        <rect id="timeBar" x="10" y="250" width="120" height="35" style="fill:red;"/>
+    </g>
+    <g id="start">
+        <rect x="0" y="0" width="800" height="600" fill="url(#back_color)"/>
+        <text x="0" y="225" style="font-size: 25px; text-anchor: middle; font-family: impact" fill="white">
+            <tspan x="400" dy="0" style="text-anchor:middle font-size 55px" fill="red">Ninja Master
+                <animate attributeName="fill" values="red;white;red" dur="1s" repeatCount="indefinite" />
+            </tspan>
+            <tspan x="400" dy="50">You are now a ninja master. You goal is to</tspan>
+            <tspan x="400" dy="25">collect all the 8 diamonds before the time runs out.</tspan>
+            <tspan x="400" dy="25">There will be enemy along your journey and</tspan>
+            <tspan x="400" dy="25">you can shoot them to increase your time and score.</tspan>
+            <tspan x="400" dy="25">"W" jump, "A"left, "D"right, space shoot</tspan>
+            <tspan x="400" dy="25">"C" cheat mode, "V"cancel cheat mode</tspan>
+            <tspan x="400" dy="35">Li Xiang 20492986</tspan>
+        </text>
+        <g id="button">
+            <g onclick="top.setZoom()" transform="translate(150, 500)">
+                <rect x="0" y="0" width="140" height="40" style="fill:yellow;stroke:purple;stroke-width:4" />
+                <text x="70" y="28" style="fill:purple;font-size:25px;text-anchor:middle">Zoom</text>
+            </g>
+            <g onclick="top.defaultZoom()" transform="translate(500, 500)">
+                <rect x="0" y="0" width="140" height="40" style="fill:yellow;stroke:purple;stroke-width:4" />
+                <text x="70" y="28" style="fill:purple;font-size:25px;text-anchor:middle">Normal</text>
+            </g>
+        </g>
+
+    </g>
+    <g id="highscoretable" transform="translate(40,40)" style="visibility:hidden">
+        <rect width="520" height="480"
+              style="fill:white;stroke:red;stroke-width:2"/>
+        <text x="260" y="40"
+              style="fill:red;font-size:30px;font-weight:bold;text-anchor:middle">
+            High Score Table
+        </text>
+        <text id="highscoretext" y="45"
+              style="font-size: 20px;font-weight:bold"/>
+    <g id="again" onclick="top.replay()" transform="translate(400,450)">
+        <rect x="0" y="0" width="140" height="40" style="fill:white;stroke:black;stroke-width:2"></rect>
+        <text x="70" y="25" style="fill:black;font-size:22px;text-anchor:middle"> Start again? </text>
+    </g>
+    </g>
+</svg>
+
