@@ -13,7 +13,7 @@ github_username:  az123zx123
 gplus_username:  none
 linkedin_public_url: 想-李-40420814b # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
 disqus_username: none
-profile_picture: /src/img/profile.jpg
+profile_picture: https://github.com/az123zx123/personal/blob/master/src/img/profile.jpg
 
 # Build settings
 markdown: kramdown
@@ -34,16 +34,16 @@ links:
       url: /personal
       key_trigger: 1
     - title: my posts
-      url: /posts
+      url: /personal/posts
       key_trigger: 2
     - title: series
-      url: /series
+      url: /personal/series
       key_trigger: 3
     - title: tags
-      url: /tags
+      url: /personal/tags
       key_trigger: 4
     - title: about me
-      url: /about
+      url: /personal/about
       key_trigger: 5
   section_2:
     - title: github
