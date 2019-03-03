@@ -39,8 +39,8 @@ links:
     - title: series
       url: /personal/series
       key_trigger: 3
-    - title: tags
-      url: /personal/tags
+    - title: study
+      url: /personal/study
       key_trigger: 4
     - title: about me
       url: /personal/about
