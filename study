@@ -1,0 +1,41 @@
+
+---
+layout: default
+title: "My study"
+permalink: /study/index.html
+description: "Some study plan about Li Xiang..."
+---
+
+<h2>What I've learnt</p>
+<ul>programming
+  <li>java</li>
+  <li>c++</li>
+  <li>python</li>
+  <li>Matlab</li>
+  <li>HTML, CSS, JavaScript</li>
+  </ul>
+
+<ul>science
+  <li>basic math</li>
+  <li>basic physics</li>
+  <li>basic chemistry</li>
+  <li>basic biology</li>
+ </ul>
+ 
+<ul>history
+  <li>medieval europea</li>
+  <li>chinese history</li>
+  <li>Sengoku period</li>
+  </ul>
+
+<h2>What I want to know</p>
+<ul>planning (listed in no particular order)
+<li>SLAM</li>
+<li>abstract algebra</li>
+<li>neural network</li>
+<li>regularization</li>
+<li>manifold</li>
+<li>existentialism</li>
+<li>folk legend in southwest china</li>
+<li>to be continue</li>
+</ul>
