@@ -65,6 +65,8 @@ projects:
     url: https://github.com/az123zx123/escape
   - name: book_collection
     url: https://github.com/az123zx123/book_collection
+  - name: flight-shout
+    url: https://github.com/az123zx123/flight-shout
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
