@@ -1,5 +1,5 @@
 # Site settings
-title: Li Xiang - The salted fish in clean water bay
+title: Li Xiang - The salted fish in clear water bay
 description: "A blog about Li Xiang ..."
 #baseurl: "/space-jekyll-template" # for test: remove string '/space-jekyll-template' to ''
 #url: "http://victorvoid.github.io/space-jekyll-template/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
@@ -63,8 +63,8 @@ projects:
     url: https://github.com/Sausage-SONG/HKUST_Canteen_Visualization
   - name: escape
     url: https://github.com/az123zx123/escape
-  - name: book_collection
-    url: https://github.com/az123zx123/book_collection
+  - name: ALS_prediction
+    url: https://github.com/az123zx123/Attributes-evaluation-for-ALS-disease-progression
   - name: flight-shout
     url: https://github.com/az123zx123/flight-shout
 
