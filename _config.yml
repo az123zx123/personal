@@ -1,12 +1,12 @@
 # Site settings
-title: Li Xiang - The salted fish in clear water bay
+title: Li Xiang
 description: "A blog about Li Xiang ..."
 #baseurl: "/space-jekyll-template" # for test: remove string '/space-jekyll-template' to ''
 #url: "http://victorvoid.github.io/space-jekyll-template/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 # User settings
 username: Li Xiang
-user_title: Li Xiang - salted fish
+user_title: Li Xiang
 email: xlidq@connect.ust.hk
 twitter_username: lixiang_ragnar
 github_username:  az123zx123
